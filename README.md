@@ -1,2 +1,98 @@
-# KelasPintar
-Selamat datang sistem kenal pintar murid
+[index.html](https://github.com/user-attachments/files/25977399/index.html)
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instrumen Kelas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark">IK</div>
+          <div>
+            <p class="eyebrow">Portal Pembelajaran</p>
+            <h1>Instrumen Kelas</h1>
+          </div>
+        </div>
+        <nav class="nav" id="nav"></nav>
+        <div class="sidebar-foot">
+          <p id="sessionSummary">Sila log masuk untuk mula.</p>
+          <button class="ghost danger hidden" id="logoutButton" type="button">Log keluar</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="menu-button" id="menuButton" type="button">Menu</button>
+          <div>
+            <p class="eyebrow" id="pageEyebrow">Sistem pengajaran dan penilaian</p>
+            <h2 id="pageTitle">Selamat datang</h2>
+          </div>
+        </header>
+
+        <section class="content" id="app"></section>
+      </main>
+    </div>
+
+    <template id="loginTemplate">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Versi pertama</p>
+          <h3>Urus kelas, bahan, dan penilaian murid dalam satu web.</h3>
+          <p>
+            Guru boleh cipta kelas, susun topik, muat naik bahan, bina kuiz objektif, dan lihat prestasi.
+            Murid pula boleh akses nota, jawab latihan, dan semak markah sendiri.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Bahasa Melayu</span>
+            <span class="tag">Mobile-friendly</span>
+            <span class="tag">Auto-marking</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h3>Log masuk</h3>
+            <p>Pilih akaun demo atau buat akaun tempatan baharu.</p>
+          </div>
+
+          <form id="loginForm" class="stack">
+            <label>
+              Emel
+              <input name="email" type="email" placeholder="contoh@sekolah.edu" required />
+            </label>
+            <button class="primary" type="submit">Masuk</button>
+          </form>
+
+          <div class="divider"><span>Akaun demo</span></div>
+          <div id="demoAccounts" class="demo-list"></div>
+
+          <div class="divider"><span>Buka akaun baru</span></div>
+          <form id="registerForm" class="stack">
+            <label>
+              Nama
+              <input name="name" type="text" placeholder="Nama penuh" required />
+            </label>
+            <label>
+              Emel
+              <input name="email" type="email" placeholder="guru@sekolah.edu" required />
+            </label>
+            <label>
+              Peranan
+              <select name="role">
+                <option value="teacher">Guru</option>
+                <option value="student">Murid</option>
+              </select>
+            </label>
+            <button class="ghost" type="submit">Daftar akaun tempatan</button>
+          </form>
+        </div>
+      </section>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
